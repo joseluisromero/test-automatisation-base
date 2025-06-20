@@ -1,5 +1,5 @@
 @EvaluacionKarate
-Feature: Test de API súper simple
+Feature: API REST para gestión de personajes de Marvel
 
   Background:
     * configure ssl = true
@@ -23,7 +23,7 @@ Feature: Test de API súper simple
     Then status 200
 
   @id:1 @ConsultaTodosLosPersonajes
-  Scenario Outline: Consultar todos los personajes
+  Scenario Outline: Obtener todos los personajes
     Given url baseUrl + '/<usuario>/api/characters'
     When method get
     Then status 200
